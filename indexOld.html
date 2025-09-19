@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+    <script src="taskMgApp.js"></script>
+    <title>Javascript SAB4</title>
+  </head>
+  <body>
+      <h1 id="title"> Task Management</h1>
+      <section id="taskFormSection">
+                    <!-- first section -->
+          <label for="taskName">Task name</label>
+          <select name="taskName" id="taskName">
+                <option value="Project 1">Project 1</option>
+                <option value="Project 2">Project 2</option>
+                <option value="Project 3">Project 3</option>
+                <option value="Project 4">Project 4</option>
+          </select>
+          <label for="taskCategory">Task category</label>
+          <select name="taskCategory" id="taskCategory">
+                <option value="Stockage">Stockage</option>
+                <option value="Ordering">Ordering</option>
+                <option value="UI">Interface</option>
+                <option value="Backend">Backend</option>
+                <option value="Transactions">Transactions</option>
+          </select>
+          <label for="taskStatus">Task status</label>
+          <select name="taskStatus" id="taskStatus">
+                <option value="InProgress">InProgress</option>
+                <option value="ToDo">To Do</option>
+                <option value="Finished">Finished</option>
+          </select>
+          <label for="addTaskDate">Task date</label>
+          <input id="addTaskDate" type="date" placeholder="eg. 2023-10-10" >
+          <button id="addTaskButton"> Add Task</button>
+      </section>
+      <section>
+        <!-- display tasks -->
+        <table>
+        <!-- top row of table -->
+          <thead>
+             <tr>
+                <th>Task Name. </th>
+                <th>Category. </th>
+                <th>Date.     </th>
+                <th>Status.   </th>
+             </tr>
+          </thead>
+          <tbody id="taskBody">
+            <!-- js tasks created will be inserted here -->
+          </tbody>    
+        </table>
+     </body>
+  </html>      
+ <!-- 1. Adding New Tasks
+Create input fields for the task name, category, deadline, and an initial status (e.g., “In Progress”).
+Include an “Add Task” button that will add the task to the task list.
+Each task should be stored as an object with properties such as task name, category, deadline, and status.
+Add the task object to an array that holds all tasks.
+
+
+
+
+
+
+2. Displaying the Task List
+Create an HTML structure (such as an unordered list or table) to display the task list.
+For each task, display the task name, category, deadline, and status.
+Dynamically update the task list in the browser each time a new task is added or a status is updated.
+3. Updating Task Status
+Allow users to update the status of tasks (e.g., “In Progress,” “Completed”) via a dropdown or button.
+Automatically check each task’s deadline and mark tasks as “Overdue” if the current date has passed the deadline.
+Update the displayed task list whenever a task’s status changes.
+4. Filtering Tasks
+Add functionality to filter tasks by category or status (e.g., show only “Completed” tasks or tasks under the “Work” category).
+Provide a dropdown or set of buttons for users to choose a filter.
+When a filter is selected, only display the tasks that match the selected category or status. -->
+ 

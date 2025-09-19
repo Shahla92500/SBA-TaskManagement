@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="./taskMgApp.js" defer></script>
+    <!-- <script src="./script.js" defer></script> -->
+  </head>
+  <body style="font-size: 16px">
+    <h1 id="title">Task management</h1>
+    <section id="taskFormSection">
+        <!-- first section -->
+       <label for="taskName">Task name</label>
+       <select name="taskName" id="taskName">
+           <option value="task1">Task 1</option>
+           <option value="task2">Task 2</option>
+           <option value="task3">Task 3</option>
+       </select>
+
+       <label for="taskCategory">Task category</label>
+       <select name="taskCategory" id="taskCategory">
+           <option value="work">Work</option>
+           <option value="personal">Personal</option>
+           <option value="school">School</option>
+       </select>
+
+       <label for="taskDate">Task date</label>
+       <input id="taskDate" type="date" placeholder="eg. 2023-10-10" type="'text"/>
+
+       <label for="taskStatus">Task status</label>
+        <select name="taskStatus" id="taskStatus">
+            <option value="not started">Not Started</option>
+            <option value="in progress">In Progress</option>
+            <option value="completed">Completed</option>
+        </select>
+       <button id="addTaskButton" style="display: inline-block; margin-left: font-size: 18px">Add Task</button>
+   </section>
+    <section>
+        <!-- display tasks -->
+    <table>
+        <!-- top row of table -->
+        <thead>
+            <tr>
+                <th>Task Name</th>
+                <th>Category</th>
+                <th>Date</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+        <tbody id="taskBody">
+            <!-- js tasks created will be inserted here -->
+        </tbody>    
+    </table>
+   </section>
+  </body>
+</html>
+ <!-- 1. Adding New Tasks
+Create input fields for the task name, category, deadline, and an initial status (e.g., “In Progress”).
+Include an “Add Task” button that will add the task to the task list.
+Each task should be stored as an object with properties such as task name, category, deadline, and status.
+Add the task object to an array that holds all tasks.
