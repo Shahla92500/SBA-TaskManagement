@@ -1,0 +1,14 @@
+ .table-blue {
+    width: 100%;
+    border-collapse: collapse;
+    background: #cdfd0d;   /* blue */
+    color: #002779;           /* white text */
+  }
+  .table-blue th, .table-blue td {
+    padding: .75rem;
+    border: 1px solid rgba(255,255,255,.25);
+    text-align: center;      /* change to center if you prefer */
+  }
+  .table-blue thead th {
+    font-weight: 600;
+  }

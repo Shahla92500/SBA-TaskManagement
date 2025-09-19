@@ -17,8 +17,12 @@ function addTask() {
     category = taskCategoryInput.value;
     date = taskDateInput.value;
     statusT = taskStatusInput.value;
-    console.log(name, category, date, status);
+    console.log(nameT, category, date, statusT);
 // group together parts of task to make a whole task
+    if (!nameT || !category || !date || !statusT) {
+        alert("Please fill in all fields before adding a task.");
+        return;
+    }
     const newTask = {
     nameT,
     category,
@@ -61,6 +65,9 @@ function displayTasks() {
         const dateTData = document.createElement("td");
         dateTData.textContent = task.date;
         trow.appendChild(dateTData);
+        if (new Date(task.date) < new Date() && task.statusT !== "Completed") {
+            task.statusT = "Overdue";
+        }
        // get task status(element) from html 2)add the user input to the element 3) append the element to the row:
         const statusTData = document.createElement("td");
         statusTData.textContent = task.statusT;
@@ -72,3 +79,5 @@ function displayTasks() {
 }
 const taskList = document.getElementById("taskList");
 addTaskButton.addEventListener("click", displayTasks);
+
+// Each task should be stored as an object with properties such as task name, category, deadline, and status.
